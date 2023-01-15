@@ -7,7 +7,7 @@ yt [PATH] [OPTIONS] [URL]
 1) download yt-dlp from github https://github.com/yt-dlp/yt-dlp/releases
 2) place the binary where you want
 3) add permission to execute `chmod +x [binary name]`
-4) edit the script to put the correct path where you see `/home/user/yt-dlp`
+4) edit the script to put the correct path where you see `/home/user/yt-dlp` (Lines 16 and 19)
 5) put the script in your path so you can use it from anywhere
 `sudo cp ./yt.sh /usr/local/bin/yt`
 
@@ -25,6 +25,9 @@ URL of the video or playlist to download.
 [-normal]
 my preferences. But you can modify the script for you
 Uses yt-dlp with specific arguments to download a video or playlist depending on the given URL. If it is a playlist, videos will be downloaded with a numbered filename in the order of the playlist and in MP4 format. If it is a video, the title of the video will be used as filename and in MP4 format.
+
+[YT-DLP OPTIONS]
+use the normal options of yt-dlp https://github.com/yt-dlp/yt-dlp#general-options
 
 playlist:
 yt-dlp -i -f mp4 -o "[PATH]/%(playlist_index)s-%(title)s.%(ext)s" [URL]
